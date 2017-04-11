@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39; data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca  &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; media-src *; img-src &#39;self&#39; data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="./css/ratchet.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <title>Giftr</title>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a id="btnBack" class="btn btn-link btn-nav pull-left"> <span class="icon icon-left-nav"></span> Back </a> <a href="./gifts.html#giftModal" class="btn btn-link btn-nav pull-right">
+                Add Idea
+                <span class="icon icon-plus"></span>
+            </a>
+        <h1 class="title">GIFTR</h1> </header>
+    <div class="content">
+        <!-- read through localStorage for contacts -->
+        <h3 id="personTitle"></h3>
+        <ul class="table-view" id="gift-list">
+            <!--
+            <li class="table-view-cell media"> <span id="rGift" class="pull-right icon icon-trash midline"></span>
+                 
+                <div class="media-body"> Gift Idea 3
+                    <p>LCBO</p>
+                    <p><a href="./gifts.html#" target="_blank">http://www.lcbo.com/</a></p>
+                    <p>$99.99</p>
+                </div>
+            </li>
+-->
+        </ul>
+    </div>
+    <div id="giftModal" class="modal">
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="./gifts.html#giftModal"></a>
+            <h1 class="title">Add Idea</h1> </header>
+        <div class="content">
+            <p class="content-padded"> Name of person you are buying gifts for </p>
+            <div class="content-padded">
+                <form class="input-group">
+                    <div class="input-row">
+                        <label>Gift idea</label>
+                        <input id="sGiftName" type="text" placeholder="idea" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"> </div>
+                    <div class="input-row">
+                        <label>Store</label>
+                        <input id="sGiftStore" type="text" placeholder="where to find it"> </div>
+                    <div class="input-row">
+                        <label>URL</label>
+                        <input id="sGiftUrl" type="url" placeholder="http://www.example.com/"> </div>
+                    <div class="input-row">
+                        <label>Cost</label>
+                        <input id="sGiftCost" type="text" placeholder="$14.99"> </div>
+                </form>
+                <p class="content-padded">
+                    <button id="cGift" class="btn btn-block"> <span class="icon icon-close"></span> Cancel
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    <button id="sGift" class="btn btn-primary btn-block"> <span class="icon icon-check"></span> Save
+                        <!-- process the info then dispatch click to the close button -->
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--    <script type="text/javascript" src="cordova.js"></script>-->
+    <!-- include the compiled Ratchet JS -->
+    <script src="./js/ratchet.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
